@@ -1,5 +1,7 @@
 # Websockets using TLS client certificates
 
+<a href="https://www.buymeacoffee.com/mjwhitta">🍪 Buy me a cookie</a>
+
 This repo contains sample code for a server and a client that use and
 enforce TLS client certificates. The server uses a certificate chain
 in pki/pems/localhost.chain.pem. This chain also contains the
