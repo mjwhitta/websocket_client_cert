@@ -1,9 +1,11 @@
-module gitlab.com/mjwhitta/websocket_client_cert
+module github.com/mjwhitta/websocket_client_cert
 
-go 1.14
+go 1.19
 
 require (
-	github.com/gorilla/websocket v1.4.2
-	gitlab.com/mjwhitta/hilighter v1.9.0
-	gitlab.com/mjwhitta/log v1.4.1
+	github.com/gorilla/websocket v1.5.0
+	github.com/mjwhitta/hilighter v1.11.2
+	github.com/mjwhitta/log v1.6.3
 )
+
+require github.com/mjwhitta/errors v1.0.1 // indirect

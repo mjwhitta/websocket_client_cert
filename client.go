@@ -7,8 +7,8 @@ import (
 	"strings"
 
 	ws "github.com/gorilla/websocket"
-	hl "gitlab.com/mjwhitta/hilighter"
-	"gitlab.com/mjwhitta/log"
+	hl "github.com/mjwhitta/hilighter"
+	"github.com/mjwhitta/log"
 )
 
 var addr = "localhost:8443"

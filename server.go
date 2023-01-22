@@ -7,7 +7,7 @@ import (
 	"net/http"
 
 	ws "github.com/gorilla/websocket"
-	"gitlab.com/mjwhitta/log"
+	"github.com/mjwhitta/log"
 )
 
 var addr = "localhost:8443"
