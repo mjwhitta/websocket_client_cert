@@ -3,24 +3,26 @@ package main
 import (
 	"crypto/tls"
 	"crypto/x509"
-	"io/ioutil"
 	"net/http"
+	"os"
 
 	ws "github.com/gorilla/websocket"
 	"github.com/mjwhitta/log"
 )
 
-var addr = "localhost:8443"
-var wsup = ws.Upgrader{}
+var (
+	addr string = "localhost:8443"
+	wsup ws.Upgrader
+)
 
 func generateTLSConfig() *tls.Config {
 	var e error
 	var pem []byte
-	var pemFile = "pki/pems/localhost.chain.pem"
+	var pemFile string = "pki/pems/localhost.chain.pem"
 	var pool *x509.CertPool = x509.NewCertPool()
 
 	// Read in server + CA chain
-	if pem, e = ioutil.ReadFile(pemFile); e != nil {
+	if pem, e = os.ReadFile(pemFile); e != nil {
 		log.Err("Failed read CA: " + e.Error())
 	}
 
@@ -40,7 +42,7 @@ func main() {
 	var e error
 	var msg []byte
 	var mt int
-	var s = &http.Server{
+	var s *http.Server = &http.Server{
 		Addr:      addr,
 		TLSConfig: generateTLSConfig(),
 	}

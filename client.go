@@ -11,12 +11,12 @@ import (
 	"github.com/mjwhitta/log"
 )
 
-var addr = "localhost:8443"
+var addr string = "localhost:8443"
 
 func generateTLSConfig() *tls.Config {
 	var e error
 	var pem tls.Certificate
-	var pemFile = "pki/pems/user.client.pem"
+	var pemFile string = "pki/pems/user.client.pem"
 
 	// Read in x509 PEM certificate (cert + key)
 	if pem, e = tls.LoadX509KeyPair(pemFile, pemFile); e != nil {

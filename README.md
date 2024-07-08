@@ -1,6 +1,6 @@
 # Websockets using TLS client certificates
 
-<a href="https://www.buymeacoffee.com/mjwhitta">🍪 Buy me a cookie</a>
+[![Yum](https://img.shields.io/badge/-Buy%20me%20a%20cookie-blue?labelColor=grey&logo=cookiecutter&style=for-the-badge)](https://www.buymeacoffee.com/mjwhitta)
 
 This repo contains sample code for a server and a client that use and
 enforce TLS client certificates. The server uses a certificate chain
